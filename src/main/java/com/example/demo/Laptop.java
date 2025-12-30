@@ -3,17 +3,21 @@ package com.example.demo;
 import org.springframework.stereotype.Component;
 
 @Component
-// @Primary // we use this annotation when we have two classes who 
+// @Primary // we use this annotation when we have two classes who
 // implements the same interface and we are calling the interface.
 // this basicaly makes this class the primary choice for the spring container
-public class Laptop {
+public class Laptop implements Computer {
 
-    public void compile(){
+    public void markName() {
+        System.out.println("the name of my laptop is HP");
+    }
+
+    public void compile() {
         System.out.println("compiling with some bugs");
     }
 
-    public void debug(){
+    public void debug() {
         System.out.println("debugging my code");
     }
-    
+
 }

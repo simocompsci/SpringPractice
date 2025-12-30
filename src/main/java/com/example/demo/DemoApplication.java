@@ -15,6 +15,19 @@ public class DemoApplication {
 		// this code is to implement DI using spring 
 		Dev obj = context.getBean(Dev.class);
 		obj.build();
+
+
+		// This is when we used constructor injection
+		// Computer obj1 = new Desktop();
+		// Dev2 dev = new Dev2(obj1);
+		// dev.execute();
+
+		// And this is where we used setter injection
+		Computer laptop = new Laptop();
+		Dev2 dev1 = new Dev2();
+		dev1.setC(laptop);
+		dev1.execute();
+		
 	}
 
 }
